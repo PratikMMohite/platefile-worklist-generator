@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./xspreadsheet.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./handsontable.full.min.js"></script>
+  <link href="./handsontable.full.min.css" rel="stylesheet" media="screen">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work List</title>
+</head>
+
+<body>
+  <div class="printHeader">
+    <div class="headerText">Worklist</div>
+    <div id="headerDt"></div>
+  </div>
+  <div class="connectionloops">
+    <div class="top_logo">
+      Cloud Pathology
+      <span class="name">Thermofisher QuantStudio Plate File</span>
+    </div>
+    <div id="gridDetails">
+      <table>
+        <tr>
+          <td>
+            <input type="number" id="rows" />
+          </td>
+          <td id="x">X</td>
+          <td>
+            <input id="columns" type="number" />
+          </td>
+          <td>
+            <div class="clbutton" onclick="load()">Generate</div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div style="display: flex;">
+      <div class="clbutton" onclick="generate()">Download</div>
+      <div class="clbutton" onclick="generateTable()">Print</div>
+    </div>
+  </div>
+  <div id="spreadsheet"></div>
+  <table id="printTable"></table>
+  <script src="./main.js"></script>
+</body>
+
+</html>
